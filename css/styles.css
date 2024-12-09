@@ -1,0 +1,579 @@
+/*---------- Global CSS ----------*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background:#272727;
+    font-family: 'Poppins';
+    color: #fff;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+p {
+    line-height: 1.3em;
+    color:rgba(255,255,255,0.8);
+}
+h2 {
+    font-size:40px;
+    letter-spacing: 0.1em;
+}
+h4 {
+    font-size:30px;
+    letter-spacing: 0.1em;
+}
+h6 {
+    font-size: 18px;
+}
+p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+.ms-spacer-60 {
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.ms-spacer-60 {
+    height: 60px;
+}
+.ms-site-color {
+    color:#059DFD;
+}
+.ms-subheading {
+    text-transform: uppercase;
+    color:rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+.ms-sec-pad {
+    padding: 50px 0;
+}
+
+form input {
+    background: transparent;
+    width: 100%;
+    border: 0;
+    color:#fff;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(196,196,196,0.2);
+}
+form input:focus {
+    outline: 0;
+}
+
+button.ms-primary-btn {
+    letter-spacing: 0.4em;
+    background: none;
+    padding: 15px 30px;
+    color: #fff;
+    position: relative;
+    border: none;
+    font-size: 15px;
+    z-index: 2;
+    transition: 0.01s 0.23s ease-out all;
+    overflow: hidden;
+}
+button.ms-primary-btn:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 55%;
+    background: #059DFD;
+    z-index: -1;
+    transition: 0.3s ease-in all;
+}
+button.ms-primary-btn:after {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 5%;
+    height: 90%;
+    width: 5%;
+    background: white;
+    z-index: -1;
+    transition: 0.4s 0.02s ease-in all;
+}
+button.ms-primary-btn:hover {
+    cursor: pointer;
+    color: transparent;
+}
+button.ms-primary-btn:hover:before {
+    left: 100%;
+    width: 25%;
+}
+button.ms-primary-btn:hover:after {
+    left: 100%;
+    width: 70%;
+}
+button.ms-primary-btn:hover .icon-right.after:after {
+    left: -80px;
+    color: white;
+    transition: 0.2s 0.2s ease all;
+}
+button.ms-primary-btn:hover .icon-right.after:before {
+    left: -130px;
+    top: 15px;
+    opacity: 0.2;
+    color: #fff;
+    position: absolute;
+}
+.ms-primary-btn .icon-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ms-primary-btn .icon-right:after {
+    font-family: "FontAwesome";
+    content: "→";
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    top: 23px;
+    transform: translate3D(0, -50%, 0);
+}
+.ms-primary-btn .icon-right.after:after {
+    left: -250px;
+    color: #059DFD;
+    transition: 0.15s 0.25s ease left, 0.5s 0.05s ease color;
+}
+.ms-primary-btn .icon-right.after:before {
+    content: "SHOP NOW";
+    position: absolute;
+    top: 15px;
+    left: -130px;
+    opacity: 0;
+    transition: 0.2s ease-in all;
+}
+.ms-primary-btn.ms-view-all-btn .icon-right.after:before {
+    content:"VIEW ALL";
+    left: -110px !important;
+}
+.ms-primary-btn.ms-subscribe-btn .icon-right.after:before {
+    content: "SUBSCRIBE";
+}
+
+/*----- Header CSS -----*/
+header {
+    z-index: 999;
+}
+.navbar {
+	padding: 0;
+}
+.navbar-brand img {
+	height: 52px;
+	width: auto;
+	display: block;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navbar-toggler {
+	float: right;
+	border: none;
+	padding-right: 0;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+	outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+	width: 24px;
+	height: 17px;
+	background-image: none;
+	position: relative;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after, 
+.navbar-light .navbar-toggler-icon:before{
+	width: 24px;
+	position: absolute;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after{
+	top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+	transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+	transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	border-color: transparent;
+}
+header .nav-link {
+    color:#fff !important;
+}
+.ms-navbar-nav {
+    display: -webkit-inline-box;
+    -webkit-box-orient: horizontal;
+}
+.ms-navbar-collapse {
+    position: absolute;
+    right: 50px;
+}
+.ms-navbar-collapse.collapsing ~ .ms-header-icons,
+.ms-navbar-collapse.collapse.show ~ .ms-header-icons {
+    opacity: 0;
+}
+.ms-navbar-collapse.collapse ~ .ms-header-icons {
+    opacity:1;
+    transition: .1s all ease-in-out;
+}
+@media (max-width:550px) {
+    .ms-navbar-nav {
+        -webkit-box-orient: vertical;
+        width: 100%;
+        padding: 10px 0;
+    }
+    header .ms-navbar-collapse {
+        width: 100%;
+        right: 0;
+        top: 70px;
+        background: #fff;
+    }
+    header .ms-navbar-collapse ul li a {
+        color:#333 !important;
+    }
+}
+@media (min-width:550px) {
+    .ms-navbar-collapse {
+        bottom: 10px;
+    }
+}
+
+/*----- Footer CSS -----*/
+footer {
+    background: #131313;
+    padding: 380px 0 20px;
+}
+footer p {
+    color:rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    line-height:1.7em;
+}
+.ms-footer-top .ms-left-column form {
+    padding-right: 130px;
+}
+.ms-social-icon {
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s all linear;
+    font-size: 20px;
+    padding:0 10px;
+}
+.ms-social-icon:hover {
+    color:#059DFD;
+}
+.ms-footer-nav {
+    list-style: none;
+    justify-content: space-between;
+    padding-left: 0;
+}
+.ms-footer-nav li {
+    float: left;
+}
+.ms-footer-nav li a {
+    color:#fff;
+    transition: 0.3s all linear;
+}
+.ms-footer-nav li a:hover {
+    color:#059DFD;
+    text-decoration: none;
+}
+.ms-footer-top .ms-right-column {
+    padding-left: 100px;
+}
+.ms-footer-bottom {
+    margin-top: 20px;
+    border-top:1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+}
+.ms-footer-bottom p a, 
+.ms-footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s all linear;
+}
+.ms-footer-bottom p a:hover {
+    text-decoration: none;
+    color: #059DFD;
+}
+
+/*---------- Homepage CSS ----------*/
+
+/*----- Banner Section CSS -----*/
+.ms-bnr-sec {
+    height: 100vh;
+    padding-top: 60px;
+}
+.ms-hero-heading {
+    font-size:80px;
+    letter-spacing: 0.1em;
+}
+.ms-hero-subheading {
+    letter-spacing: 0.7em;
+}
+/*----- ET-021 Section CSS -----*/
+.ms-et021-sec {
+    padding-top:120px;
+}
+.ms-special-heading {
+    font-size:190px;
+    font-weight: bold;
+    line-height: 1;
+}
+.ms-et021-sec .et021-img {
+    width: 70%;
+}
+/*----- Working Process Section CSS -----*/
+.timeline {
+    position: relative;
+}
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    width: 1px;
+    height: 80%;
+    background-color: #c4c4c4;    
+}
+.timeline__block {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.timeline__block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.timeline__midpoint {
+    position: absolute;
+    top: 86px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #0D7FC7;
+    border: 15px solid #166292;
+    outline: 15px solid #282828;
+}
+.timeline__content {
+    position: relative;
+}
+.timeline-one, 
+.timeline-two, 
+.timeline-three {
+    width: 70%;
+    margin-left:110px;
+    padding: 70px;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+.timeline-one {
+    background-image: url('../images/01.png');
+}
+.timeline-two {
+    background-image: url('../images/02.png');
+}
+.timeline-three {
+    background-image: url('../images/03.png');
+}
+@media (min-width: 1024px) {
+    .timeline:before {
+        left: 50%;
+        margin-left: -1px;
+    }
+    .timeline__midpoint {
+        left: 49%;
+        margin-left: -10px;
+    }
+    .timeline__content {
+        width: 50%;
+    }
+    .timeline__content--left {
+        margin-left: -6%;
+    }
+    .timeline__content--left .timeline__year {
+        left: 128%;
+    }
+    .timeline__year {
+        position: absolute;
+        width: 100%;
+        margin-top: 0;
+    }
+    .timeline__content--right {
+        float: right;
+        width: 53%;
+        left: 9%;
+    }
+    .timeline__content--right .timeline__year {
+        right: 115%;
+    }
+}
+.timeline__block .timeline__midpoint {
+    transition: 0.5s all linear;
+}
+.timeline__block:hover .timeline__midpoint {
+    border: 15px solid #0D7FC7;
+}
+/*----- One For All Section CSS -----*/
+
+/*----- Looking For Section CSS -----*/
+.ms-looking-for-sec {
+    margin-top: 100px;
+}
+.ms-looking-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding:40px;
+}
+.ms-running-man {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    z-index: 9;
+}
+/*----- Beautiful Expirences Section CSS -----*/
+
+/*----- Smartwatch Features Section CSS -----*/
+.ms-features-sec {
+    padding-bottom: 50px;
+}
+.ms-blue-box {
+    background: #059DFD;
+    padding: 80px 130px 40px 130px;
+}
+/*----- Fitness motivation & health monitorin Section CSS -----*/
+.ms-motivation-sec {
+    padding: 100px 0 50px;
+}
+.ms-motivation-sec span.ms-site-color {
+    font-size: 16px;
+}
+.ms-motivation-sec .ms-download-icons {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    transition: 0.3s all linear;
+    font-size:25px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+.ms-motivation-sec .ms-download-icons:hover {
+    text-decoration: none;
+    background: #0D7FC7;
+}
+/*----- User's Feedback Section CSS -----*/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {    
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide:nth-child(2n) {
+    width: 45%;
+}
+.swiper-slide:nth-child(3n) {
+    width: 45%;
+}
+.ms-user-img {
+    width:70px;
+    border-radius: 50%;
+}
+.ms-review-box {
+    background:#fff;
+    padding: 30px;
+    background-image: url('../images/quotes-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 290px;
+}
+.ms-review-box h6 {
+    color: #000;
+    font-weight: 600;
+}
+.ms-review-box p {
+    color:rgba(0, 0, 0, 0.5);
+    line-height: 1.5em;
+}
+/*----- Smart Technology Section CSS -----*/
+.ms-feedback-sec {
+    padding:100px 0;
+}
+.ms-bottom-box {
+    background: url('../images/technology-bg.png');
+    background-size: cover;
+    background-position:center;
+    padding: 100px 50px 50px;
+    margin-bottom: -300px;
+}
+.ms-line-height {
+    line-height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+.parallax {
+    perspective: 100px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    margin-left: -1500px;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .parallax__layer__0 {
+    transform: translateZ(-300px) scale(4);
+  }

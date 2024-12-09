@@ -1,0 +1,286 @@
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+@media (max-width:1600px) {
+    /*---------- Homepage CSS ----------*/
+
+    /*----- Banner Section CSS -----*/
+    .ms-hero-image {
+        width: 60%;
+    }
+    /*----- Working Process Section CSS -----*/
+    .timeline__content--left .timeline__year {
+        left: 120%;
+    }
+    .timeline__content--right .timeline__year {
+        right: 106%;
+    }
+    .timeline__content--right {
+        left: 5%;
+    }
+    
+    /*----- Looking For Section CSS -----*/
+    .ms-running-man {
+        right: 5%;
+    }
+}
+
+@media (max-width:1400px) {
+    /*---------- Homepage CSS ----------*/
+
+    /*----- Working Process Section CSS -----*/
+    .timeline__content--left .timeline__year {
+        left: 115%;
+    }
+    .timeline__content--right {
+        left: 0;
+    }
+    .timeline__content--right .timeline__year {
+        right: 94%;
+    }
+    /*----- Looking For Section CSS -----*/
+    .ms-running-man {
+        right: 2%;
+    }
+}
+
+@media (max-width:1100px) {
+    /*---------- Homepage CSS ----------*/
+
+    /*----- Banner Section CSS -----*/
+    .ms-hero-heading {
+        font-size: 80px;
+    }
+    .ms-hero-image {
+        width: 25%;
+        margin-bottom: 80px;
+    }
+    /*----- Working Process Section CSS -----*/
+    .timeline-one, 
+    .timeline-two, 
+    .timeline-three {
+        width: 100%;
+        margin-left: 80px;
+        padding: 40px 100px;
+    }
+    .timeline__content--right .timeline__year {
+        right: 102%;
+    }
+    .timeline__text--right {
+        left: 50px;
+        position: relative;
+    }
+    /*----- Smartwatch Features Section CSS -----*/
+    .ms-blue-box {
+        padding: 80px 40px 40px 40px;
+    }
+    /*----- Fitness motivation & health monitorin Section CSS -----*/
+    .ms-motivation-sec {
+        padding:50px 0 20px;
+    }
+    /*----- Smart Technology Section CSS -----*/
+    .ms-bottom-box {
+        padding: 70px 50px 40px;
+    }
+}
+
+
+@media (max-width:950px) {
+    /*---------- Global CSS ----------*/
+    h2 {
+        font-size:32px;
+    }
+    h4 {
+        font-size:26px;
+    }
+    h5 {
+        font-size:18px;
+    }
+    h6 {
+        font-size:17px;
+    }
+    /*----- Footer CSS -----*/
+    .ms-footer-top .ms-right-column {
+        padding-left: 15px;
+        padding-top: 50px;
+    }
+
+    /*---------- Homepage CSS ----------*/
+
+    /*----- Banner Section CSS -----*/
+    .ms-bnr-sec .ms-spacer-60 {
+        height: 30px;
+    }
+    .ms-hero-heading {
+        font-size:75px;
+    }
+    /*----- ET-021 Section CSS -----*/
+    .ms-special-heading {
+        font-size: 150px;
+    }
+    /*----- Working Process Section CSS -----*/
+    .ms-process-sec {
+        padding-top: 0;
+    }
+    .timeline__block:first-child {
+        margin-top: 60px;
+    }
+    .timeline__block:last-child {
+        margin-bottom: 10px;
+    }
+    .timeline:before {
+        left: 20px;
+        top: 60px;
+    }
+    .timeline__midpoint {
+        top: 46px;
+    }
+    /*----- Looking For Section CSS -----*/
+    .ms-looking-for-sec {
+        margin-top: 0;
+    }
+    .ms-running-man {
+        right: 8%;
+        bottom: 120px;
+    }
+    /*----- Fitness motivation & health monitorin Section CSS -----*/
+    .ms-motivation-sec .ms-motivation-img {
+        padding: 0 0 50px 0;
+    }
+    /*----- User's Feedback Section CSS -----*/
+    .ms-review-box {
+        padding:20px;
+        min-height: 350px;
+    }
+}
+
+@media (max-width:550px) {
+    /*---------- Global CSS ----------*/
+    /*----- Footer CSS -----*/
+    .ms-footer-top .ms-left-column form {
+        padding-right: 0;
+    }
+
+    /*---------- Homepage CSS ----------*/
+    /*----- Banner Section CSS -----*/
+    .ms-hero-heading {
+        font-size:50px;
+    }
+    .ms-hero-image {
+        margin-bottom: 25px;
+    }
+    /*----- ET-021 Section CSS -----*/
+    .ms-et021-sec {
+        padding-top: 50px;
+    }
+    /*----- Working Process Section CSS -----*/
+    .timeline__block {
+        margin-top: 20px;
+        margin-bottom:20px;
+    }
+    .timeline-one, 
+    .timeline-two, 
+    .timeline-three {
+        margin-left: 60px;
+        padding: 40px 70px 40px 30px;
+    }
+    .timeline:before {
+        height: 75%;
+        left: 17px;
+    }
+    .timeline__midpoint {
+        width: 35px;
+        height: 35px;
+        border: 10px solid #166292;
+        top: 58px;
+    }
+    .timeline__block:first-child {
+        margin-top: 20px;
+    }
+    .timeline__block:last-child {
+        margin-bottom: 0px;
+    }
+    /*----- One For All Section CSS -----*/
+    .ms-one-for-all-sec {
+        padding-top: 20px;
+    }
+    .ms-one-for-all-sec img.watch-image {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+    }
+    /*----- Looking For Section CSS -----*/
+    .ms-looking-for-sec {
+        padding-top: 0;
+        margin-bottom: 90px;
+    }
+    .ms-looking-box {
+        padding:30px;
+        padding-bottom: 280px;
+    }
+    .ms-running-man {
+        right: 0;
+        bottom:-80px;
+        width: 90%;
+    }
+    /*----- Smartwatch Features Section CSS -----*/
+    .ms-blue-box {
+        padding: 60px 20px 20px 20px;
+    }
+    /*----- Fitness motivation & health monitorin Section CSS -----*/
+    .ms-motivation-sec .ms-motivation-img {
+        padding: 0 60px 50px 0;
+    }
+    /*----- User's Feedback Section CSS -----*/
+    .ms-feedback-sec {
+        padding: 60px 0;
+    }
+    .swiper-slide, 
+    .swiper-slide:nth-child(2n), 
+    .swiper-slide:nth-child(3n) {
+        width: 100%;
+    }
+    .ms-review-box {
+        min-height: 290px;
+    }
+    /*----- Smart Technology Section CSS -----*/
+    .ms-bottom-box {
+        padding: 50px 30px 30px;
+    }
+}
+
+@media (max-width:360px) {
+    /*---------- Global CSS ----------*/
+    h2 {
+        font-size: 24px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+
+    /*---------- Homepage CSS ----------*/
+    /*----- Banner Section CSS -----*/
+    .ms-hero-heading {
+        font-size:35px;
+    }
+    .ms-bnr-sec .ms-spacer-60 {
+        height: 20px;
+    }
+    /*----- ET-021 Section CSS -----*/
+    .ms-special-heading {
+        font-size:130px;
+    }
+}
